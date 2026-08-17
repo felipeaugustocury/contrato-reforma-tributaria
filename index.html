@@ -10,7 +10,7 @@
      PERSONALIZE ANTES DE PUBLICAR — procure por [EDITAR]
      1. WhatsApp .......... constante WHATSAPP no script final
      2. E-mail ............ constante EMAIL no script final
-     3. Agendamento ....... bloco <div id="agenda-embed"> na seção CTA
+     3. Agendamento ....... widget do Calendly na seção CTA (já configurado)
      4. Domínio/OG ........ metatags abaixo
      =================================================================== -->
 <meta property="og:title" content="Seus contratos sobrevivem à reforma tributária?">
@@ -20,6 +20,59 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600&family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+
+<!-- ============ [EDITAR] IDs DE RASTREAMENTO ============
+     Deixe em branco o que ainda não tiver. Nada quebra se ficar vazio. -->
+<script>
+window.TRACK = {
+  metaPixel:    '500829877335131',
+  googleTag:    'G-1LZQYH9WB7',
+  googleAds:    'AW-1004298224',
+  adsConversao: ''
+};
+</script>
+<script>
+(function(){
+  var T = window.TRACK || {};
+
+  if(T.metaPixel){
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}
+    (window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', T.metaPixel);
+    fbq('track', 'PageView');
+  }
+
+  var idGoogle = T.googleTag || T.googleAds;
+  if(idGoogle){
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + idGoogle;
+    document.head.appendChild(s);
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function(){ dataLayer.push(arguments); };
+    gtag('js', new Date());
+    if(T.googleTag) gtag('config', T.googleTag);
+    if(T.googleAds) gtag('config', T.googleAds);
+  }
+
+  window.rastrear = function(metaEvento, gaEvento, dados){
+    try {
+      if(window.fbq && T.metaPixel) fbq('track', metaEvento, dados || {});
+      if(window.gtag && idGoogle) gtag('event', gaEvento, dados || {});
+      if(window.gtag && T.adsConversao){
+        gtag('event', 'conversion', {
+          send_to: T.adsConversao,
+          value: (dados && dados.value) || 0,
+          currency: 'BRL'
+        });
+      }
+    } catch(e){}
+  };
+})();
+</script>
 
 <style>
 :root{
@@ -203,7 +256,6 @@ details.prem summary{font-family:var(--data);font-size:12px;letter-spacing:0.07e
 .err{color:var(--signal);font-size:14px;margin-top:6px;display:none}
 .consent{display:flex;gap:10px;align-items:flex-start;font-size:14.5px;color:var(--muted);line-height:1.5;margin:6px 0 4px;cursor:pointer}
 .consent input{width:17px;height:17px;margin:2px 0 0;flex:0 0 auto;accent-color:var(--accent)}
-#agenda-embed{border:1px dashed var(--rule);background:var(--paper-2);padding:28px;text-align:center;font-size:15px;color:var(--muted);border-radius:2px;min-height:180px;display:flex;align-items:center;justify-content:center}
 .confirm{display:none;background:var(--accent-soft);color:#0e3d2e;padding:16px 18px;border-radius:2px;font-size:15.5px;margin-top:14px}
 
 /* ---------- rodapé ---------- */
@@ -230,6 +282,9 @@ footer a{color:#c9cfd6}
 </style>
 </head>
 <body>
+
+<noscript><img height="1" width="1" style="display:none" alt=""
+src="https://www.facebook.com/tr?id=500829877335131&ev=PageView&noscript=1"></noscript>
 
 <div class="topbar">
   <div class="wrap">
@@ -499,13 +554,10 @@ footer a{color:#c9cfd6}
         <p style="color:var(--muted);font-size:19px">Uma conversa de 45 minutos para entender como a reforma tributária vai impactar o seu negócio: quais contratos da sua carteira estão expostos, qual a ordem de grandeza do desequilíbrio e por onde começar a renegociação.</p>
 
         <div style="margin-top:28px">
-          <!-- [EDITAR] AGENDAMENTO
-               Substitua todo este bloco pelo iframe da sua agenda.
-               Google Agenda: Configurações > Horários de atendimento > Copiar código de incorporação
-               Calendly:     <div class="calendly-inline-widget" data-url="https://calendly.com/SEU-LINK"></div>
-                             <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
-          -->
-          <div id="agenda-embed">Espaço reservado para o calendário de agendamento. Substitua este bloco pelo código de incorporação da sua agenda.</div>
+          <div class="calendly-inline-widget"
+               data-url="https://calendly.com/contato-felipecury/analise-reforma-tributaria?hide_gdpr_banner=1&background_color=fafaf8&text_color=11151a&primary_color=14533f"
+               style="min-width:320px;height:700px"></div>
+          <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
         </div>
       </div>
 
@@ -803,9 +855,36 @@ footer a{color:#c9cfd6}
       var c = $('confirm');
       c.textContent = 'Recebemos seus dados, ' + nome.split(' ')[0] + '. Abrimos o WhatsApp com sua mensagem pronta — é só enviar.';
       c.style.display = 'block';
+      if(window.rastrear) window.rastrear('Lead', 'generate_lead', {
+        value: Math.abs(Math.round(ctx.delta)),
+        currency: 'BRL',
+        content_name: 'Formulario reforma tributaria'
+      });
       window.open('https://wa.me/' + WHATSAPP + '?text=' + encodeURIComponent(texto), '_blank');
     });
   });
+
+  /* ---------- eventos de engajamento ---------- */
+  (function(){
+    var simulou = false;
+    campos.forEach(function(id){
+      $(id).addEventListener('change', function(){
+        if(simulou) return;
+        simulou = true;
+        if(window.rastrear) window.rastrear('ViewContent', 'simulacao_concluida', {
+          content_name: 'Calculadora IBS CBS'
+        });
+      });
+    });
+
+    window.addEventListener('message', function(e){
+      if(e.data && e.data.event === 'calendly.event_scheduled'){
+        if(window.rastrear) window.rastrear('Schedule', 'agendamento_confirmado', {
+          content_name: 'Calendly reforma tributaria'
+        });
+      }
+    });
+  })();
 })();
 </script>
 </body>
