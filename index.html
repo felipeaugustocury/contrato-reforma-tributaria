@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Seus contratos e a reforma tributária | Felipe Augusto Cury — Advocacia Empresarial</title>
+<meta name="description" content="Calcule o desequilíbrio que o IBS e a CBS causam nos contratos da sua empresa e entenda o que precisa ser renegociado antes de 2027.">
+
+<!-- ===================================================================
+     PERSONALIZE ANTES DE PUBLICAR — procure por [EDITAR]
+     1. WhatsApp .......... constante WHATSAPP no script final
+     2. E-mail ............ constante EMAIL no script final
+     3. Agendamento ....... bloco <div id="agenda-embed"> na seção CTA
+     4. Domínio/OG ........ metatags abaixo
+     =================================================================== -->
+<meta property="og:title" content="Seus contratos sobrevivem à reforma tributária?">
+<meta property="og:description" content="Calcule em 30 segundos quanto o IBS e a CBS tiram da margem dos seus contratos.">
+<meta property="og:type" content="website">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600&family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --ink:#11151a;
+  --ink-2:#1d242d;
+  --paper:#fafaf8;
+  --paper-2:#efeee8;
+  --rule:#d8d5cb;
+  --rule-dark:#333b45;
+  --text:#11151a;
+  --muted:#5a6068;
+  --muted-dark:#98a1ac;
+  --accent:#14533f;
+  --accent-soft:#e2ece7;
+  --signal:#9c2b1f;
+  --signal-soft:#f7e8e5;
+  --display:'Archivo',system-ui,sans-serif;
+  --body:'Source Serif 4',Georgia,serif;
+  --data:'IBM Plex Mono',ui-monospace,monospace;
+  --maxw:1080px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:var(--paper);color:var(--text);
+  font-family:var(--body);font-size:18px;line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+.narrow{max-width:760px}
+h1,h2,h3{font-family:var(--display);font-weight:600;letter-spacing:-0.02em;line-height:1.12;margin:0}
+h1{font-size:clamp(32px,5.2vw,58px)}
+h2{font-size:clamp(26px,3.6vw,38px)}
+h3{font-size:19px;letter-spacing:-0.01em}
+p{margin:0 0 1em}
+a{color:inherit}
+.eyebrow{
+  font-family:var(--data);font-size:12px;font-weight:500;
+  letter-spacing:0.13em;text-transform:uppercase;color:var(--muted);
+}
+.num{font-family:var(--data);font-variant-numeric:tabular-nums}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+
+/* ---------- barra fixa ---------- */
+.topbar{
+  position:sticky;top:0;z-index:50;background:var(--ink);color:#fff;
+  border-bottom:1px solid var(--rule-dark);
+}
+.topbar .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:12px;padding-bottom:12px}
+.brand{font-family:var(--display);font-weight:600;font-size:15px;letter-spacing:-0.01em}
+.brand span{display:block;font-family:var(--data);font-weight:400;font-size:10.5px;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted-dark);margin-top:2px}
+.btn{
+  display:inline-block;font-family:var(--display);font-weight:500;font-size:15px;
+  padding:12px 22px;border-radius:2px;border:1px solid transparent;
+  text-decoration:none;cursor:pointer;transition:background .15s,color .15s,border-color .15s;
+}
+.btn-solid{background:var(--accent);color:#fff}
+.btn-solid:hover{background:#0e3d2e}
+.btn-ghost{background:transparent;color:#fff;border-color:#4a545f}
+.btn-ghost:hover{background:#252d37}
+.btn-sm{padding:9px 16px;font-size:14px}
+
+/* ---------- hero ---------- */
+.hero{background:var(--ink);color:#fff;padding:72px 0 0;overflow:hidden}
+.hero h1{color:#fff;max-width:16ch}
+.hero .lede{font-size:20px;color:#c9cfd6;max-width:56ch;margin-top:22px}
+.countdown{
+  display:inline-flex;align-items:baseline;gap:10px;margin:26px 0 0;
+  padding:9px 16px;border:1px solid var(--rule-dark);border-radius:2px;background:#181f27;
+}
+.countdown b{font-family:var(--data);font-weight:500;font-size:22px;color:#fff}
+.countdown span{font-family:var(--data);font-size:12.5px;letter-spacing:0.06em;color:var(--muted-dark);text-transform:uppercase}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+
+/* ---------- nota fiscal (assinatura) ---------- */
+.nota{margin:60px 0 0;padding-bottom:64px}
+.nota-cap{font-family:var(--data);font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted-dark);margin-bottom:14px}
+.nota-linha{display:flex;gap:4px;align-items:stretch;height:64px}
+.nota-seg{
+  display:flex;flex-direction:column;justify-content:center;padding:0 16px;
+  border:1px solid var(--rule-dark);border-radius:2px;background:#181f27;min-width:0;
+  transition:flex-grow .9s cubic-bezier(.2,.7,.2,1);
+}
+.nota-seg .lab{font-family:var(--data);font-size:10.5px;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted-dark);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.nota-seg .val{font-family:var(--data);font-size:16px;font-weight:500;color:#fff;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.nota-seg.tax{background:#2a1e1c;border-color:#5c3a34}
+.nota-seg.tax .val{color:#f0b7ab}
+.nota-nota{font-size:15px;color:#c9cfd6;margin-top:16px;max-width:62ch}
+
+/* ---------- seções ---------- */
+section{padding:80px 0;border-top:1px solid var(--rule)}
+section.dark{background:var(--ink);color:#fff;border-top:1px solid var(--rule-dark)}
+section.dark h2{color:#fff}
+section.dark p{color:#c9cfd6}
+section.dark .eyebrow{color:var(--muted-dark)}
+.sec-head{max-width:60ch;margin-bottom:44px}
+.sec-head h2{margin:12px 0 16px}
+.sec-head p{color:var(--muted);font-size:19px;margin:0}
+section.dark .sec-head p{color:#c9cfd6}
+
+/* ---------- rupturas ---------- */
+.rupturas{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1px;background:var(--rule);border:1px solid var(--rule)}
+.rup{background:var(--paper);padding:28px 26px}
+.rup .art{font-family:var(--data);font-size:11.5px;letter-spacing:0.08em;color:var(--accent);text-transform:uppercase;margin-bottom:14px}
+.rup h3{margin-bottom:10px}
+.rup p{font-size:16.5px;color:var(--muted);margin:0}
+
+/* ---------- linha do tempo ---------- */
+.tl{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--rule-dark);border:1px solid var(--rule-dark);margin-top:8px}
+.tl-item{background:var(--ink);padding:22px 20px}
+.tl-item.now{background:#1f2831}
+.tl-item .yr{font-family:var(--data);font-size:14px;font-weight:500;color:#fff;letter-spacing:0.04em}
+.tl-item .tag{font-family:var(--data);font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:#f0b7ab;margin-top:3px}
+.tl-item p{font-size:15px;color:#c9cfd6;margin:12px 0 0;line-height:1.55}
+
+/* ---------- exemplo ---------- */
+.caso{border:1px solid var(--rule);background:#fff}
+.caso-top{padding:26px 28px;border-bottom:1px solid var(--rule);background:var(--paper-2)}
+.caso-top .eyebrow{margin-bottom:8px}
+.caso-top p{margin:0;font-size:17px;color:var(--muted)}
+.caso-top strong{color:var(--text);font-weight:600}
+.caso-cols{display:grid;grid-template-columns:1fr 1fr}
+.caso-col{padding:28px}
+.caso-col+.caso-col{border-left:1px solid var(--rule)}
+.caso-col h3{font-size:17px;margin-bottom:6px}
+.caso-col .who{font-size:15px;color:var(--muted);margin:0 0 20px}
+.linha{display:flex;justify-content:space-between;gap:12px;padding:9px 0;border-top:1px solid var(--rule);font-size:15.5px}
+.linha:first-of-type{border-top:none}
+.linha span{color:var(--muted)}
+.linha b{font-family:var(--data);font-weight:500;font-variant-numeric:tabular-nums}
+.veredito{margin-top:20px;padding:14px 16px;border-radius:2px;font-size:15.5px;line-height:1.5}
+.v-ok{background:var(--accent-soft);color:#0e3d2e}
+.v-bad{background:var(--signal-soft);color:#7d2117}
+.veredito b{font-family:var(--data);font-weight:500}
+
+/* ---------- calculadora ---------- */
+.calc{border:1px solid var(--rule);background:#fff}
+.calc-head{padding:24px 28px;border-bottom:1px solid var(--rule);display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:flex-end}
+.calc-head h3{font-size:20px}
+.calc-head .eyebrow{margin-bottom:6px}
+.calc-body{padding:28px}
+.grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:18px;margin-bottom:20px}
+.field label{display:block;font-family:var(--data);font-size:11.5px;letter-spacing:0.07em;text-transform:uppercase;color:var(--muted);margin-bottom:7px}
+.field input,.field select{
+  width:100%;height:44px;padding:0 12px;font-family:var(--data);font-size:15px;
+  background:var(--paper);border:1px solid var(--rule);border-radius:2px;color:var(--text);
+}
+.field input:hover,.field select:hover{border-color:#b6b2a6}
+details.prem{margin-bottom:26px;border-top:1px solid var(--rule);padding-top:16px}
+details.prem summary{font-family:var(--data);font-size:12px;letter-spacing:0.07em;text-transform:uppercase;color:var(--muted);cursor:pointer}
+.out{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1px;background:var(--rule);border:1px solid var(--rule);margin-bottom:22px}
+.out-cell{background:var(--paper);padding:18px 16px}
+.out-cell .lab{font-family:var(--data);font-size:11px;letter-spacing:0.07em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.out-cell .val{font-family:var(--data);font-size:21px;font-weight:500;font-variant-numeric:tabular-nums}
+.detalhe{width:100%;border-collapse:collapse;font-size:15.5px;margin-bottom:22px}
+.detalhe td{padding:10px 0;border-top:1px solid var(--rule)}
+.detalhe tr:first-child td{border-top:none}
+.detalhe td:first-child{color:var(--muted)}
+.detalhe td:last-child{text-align:right;font-family:var(--data);font-weight:500;font-variant-numeric:tabular-nums}
+.verdict{padding:18px 20px;border-radius:2px;margin-bottom:24px}
+.verdict h4{font-family:var(--display);font-size:17px;font-weight:600;margin:0 0 6px}
+.verdict p{font-size:15.5px;margin:0;line-height:1.55}
+.aviso{
+  border-top:1px solid var(--rule);padding-top:18px;
+  font-size:14.5px;line-height:1.6;color:var(--muted);
+}
+.aviso strong{color:var(--text);font-weight:600}
+
+/* ---------- urgência ---------- */
+.urg{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:32px;margin-top:8px}
+.urg-item{border-top:2px solid #f0b7ab;padding-top:18px}
+.urg-item h3{color:#fff;margin-bottom:10px}
+.urg-item p{font-size:16.5px;margin:0}
+
+/* ---------- cta ---------- */
+.cta-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+.cta-form .field{margin-bottom:16px}
+.cta-form .btn{width:100%;margin-top:8px;font-size:16px;padding:15px 22px}
+.cta-alt{font-size:15px;color:var(--muted);margin-top:16px}
+.cta-alt a{color:var(--accent)}
+.err{color:var(--signal);font-size:14px;margin-top:6px;display:none}
+.consent{display:flex;gap:10px;align-items:flex-start;font-size:14.5px;color:var(--muted);line-height:1.5;margin:6px 0 4px;cursor:pointer}
+.consent input{width:17px;height:17px;margin:2px 0 0;flex:0 0 auto;accent-color:var(--accent)}
+#agenda-embed{border:1px dashed var(--rule);background:var(--paper-2);padding:28px;text-align:center;font-size:15px;color:var(--muted);border-radius:2px;min-height:180px;display:flex;align-items:center;justify-content:center}
+.confirm{display:none;background:var(--accent-soft);color:#0e3d2e;padding:16px 18px;border-radius:2px;font-size:15.5px;margin-top:14px}
+
+/* ---------- rodapé ---------- */
+footer{background:var(--ink);color:var(--muted-dark);padding:52px 0;font-size:14.5px;line-height:1.6}
+footer .wrap{display:grid;grid-template-columns:1fr 1fr;gap:36px}
+footer strong{color:#fff;font-weight:600;font-family:var(--display)}
+footer a{color:#c9cfd6}
+
+@media (max-width:820px){
+  body{font-size:17px}
+  .tl{grid-template-columns:repeat(2,1fr)}
+  .caso-cols{grid-template-columns:1fr}
+  .caso-col+.caso-col{border-left:none;border-top:1px solid var(--rule)}
+  .cta-grid{grid-template-columns:1fr;gap:36px}
+  footer .wrap{grid-template-columns:1fr}
+  .nota-linha{height:auto;flex-direction:column}
+  .nota-seg{padding:12px 16px}
+  section{padding:60px 0}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <div class="brand">Felipe Augusto Cury<span>Advocacia empresarial e patrimonial</span></div>
+    <a class="btn btn-ghost btn-sm" href="#agendar">Agendar reunião</a>
+  </div>
+</div>
+
+<header class="hero">
+  <div class="wrap">
+    <p class="eyebrow" style="color:var(--muted-dark)">EC 132/2023 · LC 214/2025 · LC 227/2026</p>
+    <h1 style="margin-top:16px">Seus contratos foram assinados sob uma premissa que acaba em 2027.</h1>
+    <p class="lede">O IBS e a CBS mudam a forma de calcular o preço, de tomar crédito e de receber. Contratos plurianuais continuam juridicamente válidos — e passam a perder margem em silêncio, mês a mês, sem que ninguém aponte a causa.</p>
+
+    <div class="countdown">
+      <b class="num" id="dias">—</b>
+      <span>dias até a CBS entrar em cobrança efetiva</span>
+    </div>
+
+    <div class="hero-actions">
+      <a class="btn btn-solid" href="#agendar">Falar com especialista</a>
+      <a class="btn btn-ghost" href="#calculadora">Calcular o impacto no meu contrato</a>
+    </div>
+
+    <div class="nota">
+      <p class="nota-cap">A mesma operação, antes e depois</p>
+      <div class="nota-linha" id="notaLinha">
+        <div class="nota-seg" style="flex:1 1 100%">
+          <div class="lab">Hoje — tributo embutido no preço</div>
+          <div class="val">R$ 480.000,00</div>
+        </div>
+      </div>
+      <div class="nota-linha" style="margin-top:8px">
+        <div class="nota-seg" id="segBase" style="flex:0 1 0%;overflow:hidden">
+          <div class="lab">2027+ — preço base</div>
+          <div class="val">R$ 438.480,00</div>
+        </div>
+        <div class="nota-seg tax" id="segTax" style="flex:0 1 0%;overflow:hidden">
+          <div class="lab">IBS + CBS destacados</div>
+          <div class="val">R$ 119.266,56</div>
+        </div>
+      </div>
+      <p class="nota-nota">Mesma margem para quem vende. Nota 16% maior. Quem absorve a diferença depende de uma cláusula que a maior parte dos contratos ainda não tem.</p>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">O que efetivamente muda</p>
+      <h2>Três rupturas simultâneas na mesma cláusula de preço</h2>
+      <p>Não é um aumento de carga. É a mudança de três pressupostos que sustentavam o número escrito no contrato.</p>
+    </div>
+    <div class="rupturas">
+      <div class="rup">
+        <div class="art">Art. 12, § 2º, I</div>
+        <h3>O tributo sai de dentro do preço</h3>
+        <p>IBS e CBS não integram a própria base. O valor da nota muda de patamar sem que a receita econômica mude — o que também desarruma metas, comissões e covenants atrelados a faturamento.</p>
+      </div>
+      <div class="rup">
+        <div class="art">Art. 47</div>
+        <h3>O crédito deixa de ser automático</h3>
+        <p>O adquirente só se apropria do crédito quando o débito da operação é extinto. Pagar a nota não basta mais: o crédito passa a depender da conduta fiscal de quem está do outro lado do contrato.</p>
+      </div>
+      <div class="rup">
+        <div class="art">Arts. 31 a 36</div>
+        <h3>O caixa muda de momento</h3>
+        <p>Com o split payment, o tributo é segregado na liquidação financeira e deixa de transitar pelo caixa de quem vende. Prazos, medições e faturamento por etapas precisam ser reprecificados.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="dark">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Onde estamos</p>
+      <h2>A transição já começou. A conta começa em 2027.</h2>
+      <p>2026 é o ano de teste — e é a única janela em que dá para renegociar sem que a contraparte já esteja com o problema na mesa.</p>
+    </div>
+    <div class="tl">
+      <div class="tl-item now">
+        <div class="yr">2026</div>
+        <div class="tag">Você está aqui</div>
+        <p>CBS e IBS destacados nos documentos fiscais em alíquota de teste, sem recolhimento para quem cumpre as obrigações acessórias. Tributos antigos integralmente vigentes.</p>
+      </div>
+      <div class="tl-item">
+        <div class="yr">2027 – 2028</div>
+        <div class="tag">Ponto de virada</div>
+        <p>PIS e Cofins extintos. CBS em cobrança efetiva. IPI reduzido a zero, salvo Zona Franca. Imposto Seletivo em vigor. Preço, crédito e caixa mudam de fato.</p>
+      </div>
+      <div class="tl-item">
+        <div class="yr">2029 – 2032</div>
+        <div class="tag">Convivência</div>
+        <p>ICMS e ISS reduzidos progressivamente, com o IBS entrando na proporção equivalente. Dois sistemas rodando sobre a mesma nota.</p>
+      </div>
+      <div class="tl-item">
+        <div class="yr">2033</div>
+        <div class="tag">Regime pleno</div>
+        <p>Extinção de ICMS, ISS, PIS, Cofins e IPI. Contratos com vigência além de 2032 precisam de cláusula que sobreviva à data.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Exemplo real de carteira</p>
+      <h2>O mesmo contrato, dois desfechos opostos</h2>
+      <p>Contrato de prestação de serviços recorrentes de R$ 480 mil por ano. Prestador no Lucro Presumido, ISS de 5%. O que decide o resultado não é o contrato — é quem está do outro lado.</p>
+    </div>
+
+    <div class="caso">
+      <div class="caso-top">
+        <p class="eyebrow">Premissas comuns aos dois cenários</p>
+        <p>Preço base após expurgo de PIS/Cofins e ISS: <strong>R$ 438.480</strong> · IBS + CBS destacados a 27,2%: <strong>R$ 119.267</strong> · Novo valor da nota: <strong>R$ 557.747</strong>. A margem do prestador é a mesma nos dois casos.</p>
+      </div>
+      <div class="caso-cols">
+        <div class="caso-col">
+          <h3>Tomador no regime regular</h3>
+          <p class="who">Indústria no Lucro Real, aproveita crédito integral</p>
+          <div class="linha"><span>Custo líquido hoje</span><b>R$ 435.600</b></div>
+          <div class="linha"><span>Custo líquido em 2033</span><b>R$ 438.480</b></div>
+          <div class="linha"><span>Diferença anual</span><b>R$ 2.880</b></div>
+          <div class="veredito v-ok">Praticamente neutro. O ajuste é de forma: basta converter o preço para a lógica por fora e documentar a memória de cálculo. <b>0,7%</b> de variação.</div>
+        </div>
+        <div class="caso-col">
+          <h3>Tomador sem aproveitamento de crédito</h3>
+          <p class="who">Clínica, escola, condomínio, empresa do Simples ou consumidor final</p>
+          <div class="linha"><span>Custo líquido hoje</span><b>R$ 480.000</b></div>
+          <div class="linha"><span>Custo líquido em 2033</span><b>R$ 557.747</b></div>
+          <div class="linha"><span>Diferença anual</span><b>R$ 77.747</b></div>
+          <div class="veredito v-bad">Sem cláusula de repartição, alguém come esse valor: o tomador, se o repasse for integral; o prestador, se o preço ficar nominalmente travado. <b>16,2%</b> de variação.</div>
+        </div>
+      </div>
+    </div>
+
+    <p style="margin-top:26px;font-size:16px;color:var(--muted);max-width:70ch">É por isso que “revisar os contratos” não é uma tarefa de padronização. Cada contrato precisa ser lido contra o perfil tributário da contraparte — e o resultado muda a decisão de preço, de fornecedor e até de continuidade da relação.</p>
+  </div>
+</section>
+
+<section id="calculadora" style="background:var(--paper-2)">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Simulador</p>
+      <h2>Calcule o desequilíbrio do seu contrato</h2>
+      <p>Informe as condições reais de um contrato da sua carteira. O cálculo mantém fixa a margem líquida de quem vende e mostra o que sobra de diferença para o outro lado — o valor que precisa ser repartido em aditivo.</p>
+    </div>
+
+    <div class="calc">
+      <div class="calc-head">
+        <div>
+          <p class="eyebrow">Neutralidade IBS / CBS</p>
+          <h3>Simulador de reequilíbrio contratual</h3>
+        </div>
+        <a class="btn btn-solid btn-sm" href="#agendar">Discutir meu resultado</a>
+      </div>
+      <div class="calc-body">
+
+        <div class="grid3">
+          <div class="field">
+            <label for="valor">Valor anual do contrato (R$)</label>
+            <input type="number" id="valor" value="480000" step="1000" min="0">
+          </div>
+          <div class="field">
+            <label for="tipo">Tipo de operação</label>
+            <select id="tipo">
+              <option value="merc">Mercadoria (ICMS)</option>
+              <option value="serv" selected>Serviço (ISS)</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="ano">Ano de referência</label>
+            <select id="ano">
+              <option value="2027">2027 — CBS plena</option>
+              <option value="2028">2028</option>
+              <option value="2029">2029</option>
+              <option value="2030">2030</option>
+              <option value="2031">2031</option>
+              <option value="2032">2032</option>
+              <option value="2033" selected>2033 — regime pleno</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="grid3">
+          <div class="field">
+            <label for="regime">Regime de quem vende</label>
+            <select id="regime">
+              <option value="9.25">Lucro Real — PIS/Cofins 9,25%</option>
+              <option value="3.65" selected>Lucro Presumido — 3,65%</option>
+              <option value="0">Simples Nacional</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="icms"><span id="lblIcms">ISS</span> embutido no preço (%)</label>
+            <input type="number" id="icms" value="5" step="0.5" min="0" max="30">
+          </div>
+          <div class="field">
+            <label for="aprov">Quem compra aproveita crédito</label>
+            <select id="aprov">
+              <option value="1" selected>Sim — regime regular</option>
+              <option value="0">Não — Simples, imune ou consumidor final</option>
+            </select>
+          </div>
+        </div>
+
+        <details class="prem">
+          <summary>Ajustar alíquotas de referência</summary>
+          <div class="grid3" style="margin-top:16px;margin-bottom:0">
+            <div class="field">
+              <label for="cbsRef">CBS de referência (%)</label>
+              <input type="number" id="cbsRef" value="8.5" step="0.1" min="0">
+            </div>
+            <div class="field">
+              <label for="ibsRef">IBS de referência (%)</label>
+              <input type="number" id="ibsRef" value="18.7" step="0.1" min="0">
+            </div>
+          </div>
+          <p style="font-size:14.5px;color:var(--muted);margin:14px 0 0">As alíquotas de referência ainda dependem de Resolução do Senado Federal, com cálculo do TCU. Os valores acima são a estimativa divulgada pelo Ministério da Fazenda e não constam da lei.</p>
+        </details>
+
+        <div class="out" id="out"></div>
+        <table class="detalhe"><tbody id="detalhe"></tbody></table>
+        <div class="verdict" id="verdict"></div>
+
+        <div class="aviso">
+          <strong>Este simulador é atualizado conforme a legislação evolui.</strong> <span id="avisoTexto">A reforma ainda está em regulamentação: as alíquotas de referência não foram fixadas, regimes específicos e diferenciados seguem em detalhamento e a LC 214/2025 já foi alterada pela LC 227/2026. Os resultados usam premissas simplificadas — desconsideram créditos de insumo da cadeia, regimes específicos e reduções setoriais de alíquota — e servem para dimensionar a ordem de grandeza do problema, não para fundamentar aditivo assinado.</span> Última revisão de premissas: <span class="num" id="revisao">agosto de 2026</span>.
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="dark">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Por que a janela é agora</p>
+      <h2>Depois de 2027, você não estará mais renegociando — estará litigando.</h2>
+    </div>
+    <div class="urg">
+      <div class="urg-item">
+        <h3>A tese da imprevisão já está fragilizada</h3>
+        <p>A emenda é de 2023 e a lei complementar de 2025. Alegar fato imprevisível para pedir revisão de um contrato assinado depois disso é um argumento que enfraquece a cada mês que passa.</p>
+      </div>
+      <div class="urg-item">
+        <h3>Quem chega primeiro define a régua</h3>
+        <p>A repartição do desequilíbrio é negociação, não cálculo. Quem senta à mesa com memória de cálculo pronta ancora o número. Quem chega depois responde à proposta do outro.</p>
+      </div>
+      <div class="urg-item">
+        <h3>O contrato passa a ser filtro de fornecedor</h3>
+        <p>Com o crédito amarrado à extinção do débito, a regularidade fiscal de quem fornece vira risco de caixa da sua empresa. Isso muda a política de compras, não só a minuta.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="agendar">
+  <div class="wrap">
+    <div class="cta-grid">
+      <div>
+        <p class="eyebrow">Próximo passo</p>
+        <h2 style="margin:12px 0 18px">Fale com especialista e agende sua reunião</h2>
+        <p style="color:var(--muted);font-size:19px">Uma conversa de 45 minutos para entender como a reforma tributária vai impactar o seu negócio: quais contratos da sua carteira estão expostos, qual a ordem de grandeza do desequilíbrio e por onde começar a renegociação.</p>
+
+        <div style="margin-top:28px">
+          <!-- [EDITAR] AGENDAMENTO
+               Substitua todo este bloco pelo iframe da sua agenda.
+               Google Agenda: Configurações > Horários de atendimento > Copiar código de incorporação
+               Calendly:     <div class="calendly-inline-widget" data-url="https://calendly.com/SEU-LINK"></div>
+                             <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+          -->
+          <div id="agenda-embed">Espaço reservado para o calendário de agendamento. Substitua este bloco pelo código de incorporação da sua agenda.</div>
+        </div>
+      </div>
+
+      <div class="cta-form">
+        <p class="eyebrow" style="margin-bottom:14px">Ou deixe seus dados e retornamos o contato</p>
+        <div class="field">
+          <label for="fNome">Nome completo</label>
+          <input type="text" id="fNome" autocomplete="name" placeholder="Como devemos te chamar">
+          <div class="err" id="eNome">Informe seu nome.</div>
+        </div>
+        <div class="field">
+          <label for="fWhats">WhatsApp</label>
+          <input type="tel" id="fWhats" autocomplete="tel" placeholder="(15) 99999-9999">
+          <div class="err" id="eWhats">Informe um WhatsApp com DDD.</div>
+        </div>
+        <div class="field">
+          <label for="fEmail">E-mail</label>
+          <input type="email" id="fEmail" autocomplete="email" placeholder="voce@empresa.com.br">
+          <div class="err" id="eEmail">Informe um e-mail válido.</div>
+        </div>
+        <div class="field">
+          <label for="fEmpresa">Empresa</label>
+          <input type="text" id="fEmpresa" autocomplete="organization" placeholder="Razão social ou nome fantasia">
+          <div class="err" id="eEmpresa">Informe a empresa.</div>
+        </div>
+        <div class="grid3" style="margin-bottom:0">
+          <div class="field">
+            <label for="fSegmento">Segmento</label>
+            <input type="text" id="fSegmento" placeholder="Indústria, serviços…">
+          </div>
+          <div class="field">
+            <label for="fCidade">Cidade</label>
+            <input type="text" id="fCidade" placeholder="Sorocaba/SP">
+          </div>
+        </div>
+        <div class="field">
+          <label for="fMsg">O que você quer resolver</label>
+          <input type="text" id="fMsg" placeholder="Ex.: contratos de fornecimento plurianuais">
+        </div>
+
+        <label class="consent" for="fLgpd">
+          <input type="checkbox" id="fLgpd">
+          <span>Autorizo o contato e o tratamento dos meus dados para esta finalidade, nos termos da LGPD.</span>
+        </label>
+        <div class="err" id="eLgpd">É preciso autorizar o contato para prosseguir.</div>
+
+        <button class="btn btn-solid" id="btnEnviar" type="button">Agendar minha reunião</button>
+        <div class="confirm" id="confirm"></div>
+        <p class="cta-alt">Prefere e-mail? Escreva para <a href="#" id="linkEmail">contato@felipecury.com.br</a>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <strong>Felipe Augusto Cury — Advocacia Empresarial e Patrimonial</strong>
+      <p style="margin:10px 0 0">OAB/SP 348.583 · Sorocaba/SP<br>Direito societário preventivo, planejamento patrimonial e sucessório, contencioso empresarial.</p>
+    </div>
+    <div>
+      <p style="margin:0">Este conteúdo tem natureza informativa e não constitui consulta jurídica. O simulador utiliza premissas simplificadas e não substitui a análise individualizada de cada contrato à luz da apuração real da empresa. Referências: EC 132/2023, LC 214/2025 e LC 227/2026.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  /* ---------- configuração ---------- */
+  var WHATSAPP = '5515997664873';
+  var EMAIL    = 'contato@felipecury.com.br';
+
+  /* [EDITAR] Cole aqui a URL do app da web publicado no Apps Script.
+     Sem ela, o formulário continua funcionando, mas nada é gravado na base.
+     Esta mesma URL alimenta as premissas editáveis da calculadora. */
+  var CRM_ENDPOINT = '';
+
+  /* ---------- premissas carregadas da planilha ---------- */
+  function carregarConfig(){
+    if(!CRM_ENDPOINT) return;
+    fetch(CRM_ENDPOINT + '?config=1')
+      .then(function(r){ return r.json(); })
+      .then(function(c){
+        if(!c || !c.ok) return;
+        if(c.cbsRef){ $('cbsRef').value = c.cbsRef; }
+        if(c.ibsRef){ $('ibsRef').value = c.ibsRef; }
+        if(c.revisao){ $('revisao').textContent = c.revisao; }
+        if(c.aviso){ $('avisoTexto').textContent = c.aviso; }
+        calcular();
+      })
+      .catch(function(){ /* mantém os valores padrão do arquivo */ });
+  }
+
+  var brl = new Intl.NumberFormat('pt-BR',{style:'currency',currency:'BRL',maximumFractionDigits:0});
+  var pctFmt = function(n){ return (n*100).toFixed(1).replace('.',',') + '%'; };
+  var $ = function(id){ return document.getElementById(id); };
+
+  /* ---------- contagem regressiva ---------- */
+  (function(){
+    var alvo = new Date(2027,0,1);
+    var dias = Math.max(0, Math.ceil((alvo - new Date())/86400000));
+    $('dias').textContent = dias.toLocaleString('pt-BR');
+  })();
+
+  /* ---------- animação da nota ---------- */
+  (function(){
+    var reduz = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var base = $('segBase'), tax = $('segTax');
+    var aplica = function(){ base.style.flex = '1 1 78.6%'; tax.style.flex = '1 1 21.4%'; };
+    if(reduz){ aplica(); } else { setTimeout(aplica, 420); }
+  })();
+
+  /* ---------- e-mail ---------- */
+  var le = $('linkEmail');
+  le.textContent = EMAIL;
+  le.href = 'mailto:' + EMAIL + '?subject=' + encodeURIComponent('Reunião — impacto da reforma tributária nos contratos');
+
+  /* ---------- calculadora ---------- */
+  var campos = ['valor','tipo','ano','regime','icms','aprov','cbsRef','ibsRef'];
+  var ctx = {};
+
+  function params(ano, cbsRef, ibsRef){
+    var y = parseInt(ano,10);
+    if(y <= 2028) return { cbs:(cbsRef-0.1)/100, ibs:0.001, fator:1 };
+    if(y >= 2033) return { cbs:cbsRef/100, ibs:ibsRef/100, fator:0 };
+    var escada = {2029:0.10, 2030:0.20, 2031:0.30, 2032:0.40};
+    return { cbs:cbsRef/100, ibs:ibsRef/100*escada[y], fator:1-escada[y] };
+  }
+
+  function calcular(){
+    var A    = Math.max(0, parseFloat($('valor').value) || 0);
+    var merc = $('tipo').value === 'merc';
+    var pc   = (parseFloat($('regime').value) || 0)/100;
+    var ii   = Math.min(0.30, Math.max(0, parseFloat($('icms').value) || 0)/100);
+    var ap   = $('aprov').value === '1';
+    var p    = params($('ano').value, parseFloat($('cbsRef').value) || 8.5, parseFloat($('ibsRef').value) || 18.7);
+    var r    = p.cbs + p.ibs;
+    var ie   = Math.min(0.9, ii * p.fator);
+
+    var L = A * (1 - pc - ii);
+    if(L < 0) L = 0;
+
+    var creditoHoje = ap ? A * (0.0925 + (merc ? ii : 0)) : 0;
+    var G = A - creditoHoje;
+
+    function projetar(Lv){
+      var E = Lv/(1-ie);
+      var t = Lv * r;
+      var cred = ap ? (t + (merc ? E*ie : 0)) : 0;
+      return { E:E, t:t, total:E+t, cred:cred, J:E+t-cred };
+    }
+    var n = projetar(L);
+    var k = L > 0 ? n.J/L : 1;
+    var Lneutro = k > 0 ? G/k : 0;
+
+    var delta = n.J - G;
+    var deltaPct = G > 0 ? delta/G : 0;
+
+    $('lblIcms').textContent = merc ? 'ICMS' : 'ISS';
+
+    $('out').innerHTML =
+      cel('Valor da nota hoje', brl.format(A)) +
+      cel('Preço base ' + $('ano').value, brl.format(n.E)) +
+      cel('IBS + CBS destacados', brl.format(n.t)) +
+      cel('Novo valor da nota', brl.format(n.total));
+
+    var linhas = [
+      ['Margem líquida de quem vende (mantida fixa)', brl.format(L)],
+      ['Custo líquido de quem compra — hoje', brl.format(G)],
+      ['Custo líquido de quem compra — ' + $('ano').value, brl.format(n.J)],
+      ['Crédito de IBS/CBS apropriável', brl.format(ap ? n.t : 0)],
+      ['Alíquota efetiva IBS + CBS aplicada', pctFmt(r)]
+    ];
+    $('detalhe').innerHTML = linhas.map(function(l){
+      return '<tr><td>' + l[0] + '</td><td>' + l[1] + '</td></tr>';
+    }).join('');
+
+    var v = $('verdict');
+    var neutro = Math.abs(delta) < Math.max(1, A * 0.002);
+    if(neutro){
+      v.style.background = 'var(--accent-soft)'; v.style.color = '#0e3d2e';
+      v.innerHTML = '<h4>Operação praticamente neutra</h4><p>Mantida a margem de quem vende, o custo líquido de quem compra quase não se altera. O ajuste necessário é de forma: converter o preço para a lógica por fora e documentar a memória de cálculo em aditivo.</p>';
+    } else if(delta > 0){
+      v.style.background = 'var(--signal-soft)'; v.style.color = '#7d211f';
+      v.innerHTML = '<h4>Quem compra absorve ' + brl.format(delta) + ' por ano — ' + pctFmt(deltaPct) + '</h4><p>Para preservar o custo líquido atual de quem compra, o preço base teria de cair para ' + brl.format(Lneutro) + ', o que reduz a margem de quem vende em ' + brl.format(L - Lneutro) + '. Este é exatamente o valor que precisa ser repartido de forma expressa no aditivo — e que, sem cláusula, será decidido por quem tiver mais poder de barganha.</p>';
+    } else {
+      v.style.background = 'var(--paper-2)'; v.style.color = 'var(--text)';
+      v.innerHTML = '<h4>Quem compra ganha ' + brl.format(-delta) + ' por ano — ' + pctFmt(-deltaPct) + '</h4><p>O novo regime reduz o custo líquido de quem compra. Sem cláusula de reequilíbrio, esse ganho fica integralmente com ele. Há espaço para quem vende negociar preço base de até ' + brl.format(Lneutro) + '.</p>';
+    }
+
+    ctx = { A:A, E:n.E, t:n.t, total:n.total, J:n.J, delta:delta, ano:$('ano').value };
+  }
+
+  function cel(lab, val){
+    return '<div class="out-cell"><div class="lab">' + lab + '</div><div class="val">' + val + '</div></div>';
+  }
+
+  campos.forEach(function(id){
+    var e = $(id);
+    e.addEventListener('input', calcular);
+    e.addEventListener('change', calcular);
+  });
+  calcular();
+  carregarConfig();
+
+  /* ---------- origem do tráfego ---------- */
+  var origem = (function(){
+    var q = new URLSearchParams(window.location.search);
+    var p = ['utm_source','utm_medium','utm_campaign','utm_term','utm_content','gclid']
+      .map(function(k){ var v = q.get(k); return v ? k + '=' + v : ''; })
+      .filter(Boolean).join(' | ');
+    if(p) return p;
+    return document.referrer ? 'referrer=' + document.referrer : 'direto';
+  })();
+
+  /* ---------- formulário ---------- */
+  ['fNome','fWhats','fEmail','fEmpresa'].forEach(function(id){
+    $(id).addEventListener('input', function(){
+      var e = $('e' + id.slice(1));
+      if(e) e.style.display = 'none';
+    });
+  });
+  $('fLgpd').addEventListener('change', function(){ $('eLgpd').style.display = 'none'; });
+
+  function soDigitos(s){ return (s || '').replace(/\D/g,''); }
+
+  function gravar(dados){
+    if(!CRM_ENDPOINT) return Promise.resolve(false);
+    return fetch(CRM_ENDPOINT, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+      body: JSON.stringify(dados)
+    }).then(function(){ return true; }).catch(function(){ return false; });
+  }
+
+  $('btnEnviar').addEventListener('click', function(){
+    var nome  = $('fNome').value.trim();
+    var whats = $('fWhats').value.trim();
+    var email = $('fEmail').value.trim();
+    var emp   = $('fEmpresa').value.trim();
+    var lgpd  = $('fLgpd').checked;
+
+    var ok = true, primeiro = null;
+    function falha(errId, campoId){
+      $(errId).style.display = 'block'; ok = false;
+      if(!primeiro) primeiro = campoId;
+    }
+    if(!nome) falha('eNome','fNome');
+    if(soDigitos(whats).length < 10) falha('eWhats','fWhats');
+    if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) falha('eEmail','fEmail');
+    if(!emp) falha('eEmpresa','fEmpresa');
+    if(!lgpd) falha('eLgpd','fLgpd');
+    if(!ok){ $(primeiro).focus(); return; }
+
+    var seg    = $('fSegmento').value.trim();
+    var cidade = $('fCidade').value.trim();
+    var msg    = $('fMsg').value.trim();
+
+    var registro = {
+      nome: nome,
+      whatsapp: whats,
+      email: email,
+      empresa: emp,
+      segmento: seg,
+      cidade: cidade,
+      mensagem: msg,
+      valorContrato: ctx.A,
+      anoReferencia: ctx.ano,
+      deltaAnual: Math.round(ctx.delta),
+      novoValorNota: Math.round(ctx.total),
+      tipoOperacao: $('tipo').options[$('tipo').selectedIndex].text,
+      regimeFornecedor: $('regime').options[$('regime').selectedIndex].text,
+      aproveitaCredito: $('aprov').value === '1' ? 'Sim' : 'Não',
+      origem: origem,
+      pagina: window.location.href,
+      consentimentoLgpd: 'Sim',
+      dataHora: new Date().toISOString()
+    };
+
+    var btn = $('btnEnviar');
+    btn.disabled = true;
+    btn.textContent = 'Enviando…';
+
+    var texto = 'Olá, sou ' + nome + ', da ' + emp + '.'
+      + (seg ? ' Atuamos em ' + seg + '.' : '')
+      + ' Gostaria de agendar uma reunião sobre o impacto da reforma tributária nos nossos contratos.'
+      + (msg ? ' Contexto: ' + msg + '.' : '')
+      + ' Simulei na calculadora do site um contrato de ' + brl.format(ctx.A)
+      + ' e o resultado para ' + ctx.ano + ' foi uma diferença de ' + brl.format(ctx.delta) + ' por ano.';
+
+    gravar(registro).then(function(){
+      btn.disabled = false;
+      btn.textContent = 'Agendar minha reunião';
+      var c = $('confirm');
+      c.textContent = 'Recebemos seus dados, ' + nome.split(' ')[0] + '. Abrimos o WhatsApp com sua mensagem pronta — é só enviar.';
+      c.style.display = 'block';
+      window.open('https://wa.me/' + WHATSAPP + '?text=' + encodeURIComponent(texto), '_blank');
+    });
+  });
+})();
+</script>
+</body>
+</html>
