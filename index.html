@@ -855,7 +855,7 @@ src="https://www.facebook.com/tr?id=500829877335131&ev=PageView&noscript=1"></no
       var c = $('confirm');
       c.textContent = 'Recebemos seus dados, ' + nome.split(' ')[0] + '. Abrimos o WhatsApp com sua mensagem pronta — é só enviar.';
       c.style.display = 'block';
-      if(window.rastrear) window.rastrear('Lead', 'generate_lead', {
+      if(window.rastrear) window.rastrear('Lead', 'form_submit', {
         value: Math.abs(Math.round(ctx.delta)),
         currency: 'BRL',
         content_name: 'Formulario reforma tributaria'
