@@ -1,0 +1,39 @@
+# Seus contratos e a reforma tributária
+
+> Página do escritório Felipe Augusto Cury Advocacia Empresarial e Patrimonial (Sorocaba/SP) sobre o efeito do IBS e da CBS nos contratos empresariais, com um simulador gratuito de reequilíbrio contratual e agendamento de reunião de 45 minutos com o advogado Felipe Augusto Cury (OAB/SP 348.583).
+
+Tema: a reforma tributária do consumo (EC 132/2023, LC 214/2025 e LC 227/2026) muda a forma de calcular o preço, de tomar crédito e de receber. Contratos plurianuais continuam válidos, mas podem perder margem se o preço foi fixado com o tributo embutido.
+
+O simulador recebe o valor anual do contrato, o tipo de operação (mercadoria ou serviço), o ano de referência (2027 a 2033), o regime de quem vende e se quem compra aproveita crédito. Ele mantém fixa a margem líquida de quem vende e mostra a diferença a ser repartida em aditivo. Usa premissas simplificadas e alíquotas de referência estimadas, ainda não fixadas; serve para dimensionar a ordem de grandeza, não para fundamentar aditivo assinado. Última revisão de premissas: agosto de 2026.
+
+Exemplo da página: contrato de prestação de serviços de R$ 480 mil por ano, prestador no Lucro Presumido, ISS de 5%. Com tomador no regime regular, a diferença anual é de R$ 2.880 (0,7%). Com tomador sem aproveitamento de crédito, é de R$ 77.747 (16,2%).
+
+Este conteúdo tem natureza informativa e não constitui consulta jurídica.
+
+Perguntas frequentes respondidas na página:
+
+- O que muda nos contratos com a reforma tributária? Três pressupostos da cláusula de preço mudam ao mesmo tempo. O IBS e a CBS deixam de integrar a própria base de cálculo e passam a ser destacados por fora do preço (art. 12, § 2º, I, da LC 214/2025). O crédito de quem compra passa a depender da extinção do débito da operação (art. 47). E, com o split payment, o tributo é segregado na liquidação financeira e deixa de transitar pelo caixa de quem vende (arts. 31 a 36).
+- Quando o IBS e a CBS começam a valer? 2026 é o ano de teste: CBS e IBS são destacados nos documentos fiscais em alíquota de teste, sem recolhimento para quem cumpre as obrigações acessórias. Em 2027, PIS e Cofins são extintos e a CBS entra em cobrança efetiva. De 2029 a 2032, ICMS e ISS são reduzidos progressivamente, com o IBS entrando na proporção equivalente. Em 2033 vigora o regime pleno, com a extinção de ICMS, ISS, PIS, Cofins e IPI.
+- Contratos assinados antes da reforma continuam válidos? Sim. Contratos plurianuais continuam juridicamente válidos, mas podem perder margem mês a mês quando o preço foi fixado com o tributo embutido. Contratos com vigência além de 2032 precisam de cláusula que sobreviva à mudança de regime.
+- Quem absorve a diferença de preço: quem vende ou quem compra? Depende do perfil tributário da contraparte e do que o contrato prevê. Quando quem compra aproveita crédito integral, o efeito é praticamente neutro. Quando não aproveita, caso de empresa do Simples, entidade imune ou consumidor final, surge uma diferença que, sem cláusula de repartição, fica com o tomador, se o repasse for integral, ou com o prestador, se o preço ficar nominalmente travado. No exemplo desta página, um contrato de serviços de R$ 480 mil por ano gera diferença anual de R$ 77.747.
+- O que o simulador calcula? O simulador mantém fixa a margem líquida de quem vende e mostra a diferença que sobra para o outro lado, isto é, o valor que precisa ser repartido em aditivo. Ele usa premissas simplificadas e alíquotas de referência estimadas, que ainda não foram fixadas. Serve para dimensionar a ordem de grandeza do problema, não para fundamentar aditivo assinado.
+- Por que renegociar agora, e não em 2027? 2026 é a janela em que dá para renegociar sem que a contraparte já esteja com o problema na mesa. A emenda constitucional é de 2023 e a lei complementar de 2025: alegar fato imprevisível para rever um contrato assinado depois disso é um argumento que enfraquece a cada mês. E quem chega à negociação com memória de cálculo pronta ancora o número.
+
+## Página
+
+- [Seus contratos e a reforma tributária](https://contrato.felipecury.com.br/): Página completa, com as três mudanças na cláusula de preço, o calendário de transição de 2026 a 2033 e um exemplo com os dois cenários.
+- [Simulador de reequilíbrio contratual](https://contrato.felipecury.com.br/#calculadora): Calcula a diferença que o IBS e a CBS geram em um contrato.
+- [Perguntas frequentes](https://contrato.felipecury.com.br/#perguntas): Respostas diretas sobre contratos e reforma tributária.
+
+## Contato
+
+- [Agendar reunião](https://contrato.felipecury.com.br/#agendar): Conversa de 45 minutos sobre o impacto da reforma tributária nos contratos da empresa.
+- [WhatsApp](https://wa.me/5515997664873): +55 15 99766-4873
+
+## Sobre o escritório
+
+- [Felipe Augusto Cury Advocacia Empresarial e Patrimonial](https://felipecury.com.br/): Site do escritório, na Av. Rudolf Dafferner, 400, Sala 318, Edifício Roma, Boa Vista, Sorocaba/SP.
+- [Contratos comerciais](https://felipecury.com.br/contratos-comerciais/): Atuação do escritório em contratos empresariais.
+- [Assessoria jurídica empresarial](https://felipecury.com.br/assessoria-juridica-empresarial/): Assessoria preventiva e contínua para empresas.
+- [Felipe Augusto Cury](https://felipecury.com.br/sobre-mim/): Trajetória e formação do advogado.
+- [Política de privacidade](https://felipecury.com.br/politica-de-privacidade/): Como os dados enviados pelo formulário são tratados.

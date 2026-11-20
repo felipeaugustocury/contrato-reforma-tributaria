@@ -1,0 +1,5 @@
+# Todos os buscadores e assistentes de IA podem ler esta página.
+User-agent: *
+Allow: /
+
+Sitemap: https://contrato.felipecury.com.br/sitemap.xml
